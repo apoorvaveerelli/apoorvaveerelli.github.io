@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/dashboard.html -->
+<html style="--bottom-side-width:0px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>New Tab</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/css/style.min.css">
+<style>
+.bookmarks-placeholder { height: 31px; position: fixed; top: 0; left: 0; right: 0; display: none; background-color: #fff; }
+		@media (prefers-color-scheme: dark) {
+			.bookmarks-placeholder { background-color: rgb(50,54,57); }
+		}
+</style>
+<style type="text/css" id="themeColourCustom">@media (prefers-color-scheme: dark) { :root { --app-background: #0f0f0fec; }} @media (prefers-color-scheme: light) { :root { --app-background: rgba(255,255,255,0.98); }}:root, .dropdown.dash-dropdown { --app-background: rgba(255,255,255,0.98); }:root { --dropdown-bg: #ededed; }.nipple-bottom-left:after, .nipple-bottom-right:after, .notch-bottom { border-top-color: rgba(255,255,255,0.98); }.nipple-top-left:after, .nipple-top-right:after, .bookmarks-wrapper { border-bottom-color: rgba(255,255,255,0.98); }.notch-left { border-right-color: rgba(255,255,255,0.98) !important;}.notch-right { border-left-color: rgba(255,255,255,0.98) !important;}undefined</style><style type="text/css" id="font-override"></style><style type="text/css" data-vue-ssr-id="6e459cec:0">
+.resize-wrapper[data-v-b0999a12] { transition: height var(--duration) ease;
+}
+.resize-wrapper.hide-overflow[data-v-b0999a12] { overflow: hidden;
+}
+.smooth-height-fade-enter-active[data-v-b0999a12] { transition: opacity var(--duration) cubic-bezier(.85,-0.18,.66,.66);
+}
+.smooth-height-fade-leave-active[data-v-b0999a12] { transition: opacity var(--duration) cubic-bezier(.33,.13,.33,1.26)
+}
+.smooth-height-fade-leave-active[data-v-b0999a12] { position: absolute; top: 0; right: 0; left: 0;
+}
+.smooth-height-fade-enter[data-v-b0999a12], .smooth-height-fade-leave-to[data-v-b0999a12] { opacity: 0;
+}
+.smooth-height-slide-enter-active[data-v-b0999a12], .smooth-height-slide-leave-active[data-v-b0999a12] { transition: transform 300ms ease;
+}
+.smooth-height-slide-leave-active[data-v-b0999a12] { position: absolute; top: 0; right: 0; left: 0;
+}
+.smooth-height-slide-enter[data-v-b0999a12], .reverse .smooth-height-slide-leave-to[data-v-b0999a12] { transform: translateX(-100%);
+}
+.smooth-height-slide-leave-to[data-v-b0999a12], .reverse .smooth-height-slide-enter[data-v-b0999a12] { transform: translateX(100%);
+}
+.smooth-height-slide-fade-enter-active[data-v-b0999a12], .smooth-height-slide-fade-leave-active[data-v-b0999a12] { transition: transform 500ms ease, opacity 500ms ease;
+}
+.smooth-height-slide-fade-leave-active[data-v-b0999a12] { position: absolute; top: 0; right: 0; left: 0;
+}
+.smooth-height-slide-fade-enter[data-v-b0999a12], .reverse .smooth-height-slide-fade-leave-to[data-v-b0999a12] { transform: translateX(-50%); opacity: 0;
+}
+.smooth-height-slide-fade-leave-to[data-v-b0999a12], .reverse .smooth-height-slide-fade-enter[data-v-b0999a12] { transform: translateX(50%); opacity: 0;
+}
+</style><style type="text/css" data-vue-ssr-id="a992c826:0">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Putting this here for now before generalizing */
+/* TODO: Remove when generalized; */
+.scrim[data-v-28e1c6fc]:before, .u--scrim[data-v-28e1c6fc]:before { --size: -90px; --h-factor: 1.25; --v-factor: 0.75; position: absolute; top: calc(var(--size) * var(--v-factor)); right: calc(var(--size) * var(--h-factor)); bottom: calc(var(--size) * var(--v-factor)); left: calc(var(--size) * var(--h-factor)); z-index: -1; opacity: 0.3; background: radial-gradient(closest-side, hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0.98032) 13.81%, hsla(0, 0%, 0%, 0.92593) 25.46%, hsla(0, 0%, 0%, 0.84375) 35.31%, hsla(0, 0%, 0%, 0.74074) 43.7%, hsla(0, 0%, 0%, 0.62384) 50.98%, hsla(0, 0%, 0%, 0.5) 57.5%, hsla(0, 0%, 0%, 0.37616) 63.6%, hsla(0, 0%, 0%, 0.25926) 69.63%, hsla(0, 0%, 0%, 0.15625) 75.94%, hsla(0, 0%, 0%, 0.07407) 82.87%, hsla(0, 0%, 0%, 0.01968) 90.78%, hsla(0, 0%, 0%, 0)); content: ''; filter: none; /* <-- needed to cancel out existing general filter */
+}
+.fade-fast-enter-active[data-v-28e1c6fc], .fade-fast-leave-active[data-v-28e1c6fc] { transition: opacity 0.25s var(--a-curve);
+}
+.fade-fast-enter[data-v-28e1c6fc], .fade-fast-leave-to[data-v-28e1c6fc] { opacity: 0;
+}
+.intro[data-v-28e1c6fc] { --margin: 20px; height: 100vh; display: flex; flex-direction: column; line-height: normal;
+}
+.intro .button[data-v-28e1c6fc] { margin-right: 18px;
+}
+.intro .button[data-v-28e1c6fc]:last-child { margin-right: 0;
+}
+.button .icon[data-v-28e1c6fc] svg { height: 11px; margin-left: -5px; margin-right: 10px; opacity: 0.7; fill: white;
+}
+.intro-top[data-v-28e1c6fc], .intro-bottom[data-v-28e1c6fc] { padding: var(--margin) 0; flex: 0 0 120px;
+}
+.intro-top[data-v-28e1c6fc] {
+}
+.logo[data-v-28e1c6fc] { --size: 80px; height: var(--size); width: var(--size); border-radius: 100%; box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+.intro-middle[data-v-28e1c6fc] { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.intro-middle .u--scrim[data-v-28e1c6fc]:before { opacity: 0.35;
+}
+.intro-middle-wrapper[data-v-28e1c6fc] { max-width: 100%; padding: 0 40px; position: relative; top: -8px; /* <-- vertical center to make up for gap above heading text */ display: inline-flex; flex-direction: column; align-items: center;
+}
+.question[data-v-28e1c6fc] { padding-bottom: 15px; line-height: 1.2; white-space: normal;
+}
+.input-wrapper[data-v-28e1c6fc] { --password-visibility-icon-width: 25px; --password-visibility-icon-side-padding: 8px; max-width: 100%; padding-right: 40px; position: relative; align-self: stretch; font-weight: 500; border-bottom: 3px solid #fff;
+}
+.input-wrapper.has-text-input[data-v-28e1c6fc] { padding: 0;
+}
+.input-wrapper .hidden-span[data-v-28e1c6fc] { display: inline-block; visibility: hidden;
+}
+.input[data-v-28e1c6fc] { width: 100%; padding: 0; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: none; font-weight: 500; line-height: normal; outline: none; text-align: center;
+}
+.input[data-v-28e1c6fc]::-ms-reveal { display: none;
+}
+.input.password-input[data-v-28e1c6fc] { padding: 0 calc(var(--password-visibility-icon-width) + var(--password-visibility-icon-side-padding) * 2) 0 0;
+}
+.password-visibility-wrapper[data-v-28e1c6fc] { padding: 6px 0 0 var(--password-visibility-icon-side-padding); position: absolute; top: 5px; right: 0; bottom: 0; display: flex; align-items: center; background: transparent; border: none; cursor: pointer;
+}
+.password-visibility-wrapper[data-v-28e1c6fc]:focus { outline: none;
+}
+.password-visibility-icon[data-v-28e1c6fc] { width: var(--password-visibility-icon-width);
+}
+.below[data-v-28e1c6fc] { position: absolute; top: 100%; left: 0; right: 0; font-size: 1rem; /* <-- reset giant font set on .intro class */
+}
+.below-input-msg[data-v-28e1c6fc] { margin: 2rem 20px 0; font-size: 1.1875rem; text-align: center; white-space: normal; user-select: text;
+}
+.tip[data-v-28e1c6fc] { line-height: 150%;
+}
+.tip[data-v-28e1c6fc] a { text-decoration: underline !important; white-space: nowrap;
+}
+.loading-icon[data-v-28e1c6fc] { vertical-align: baseline;
+}
+.continue-button-wrapper[data-v-28e1c6fc] { margin-top: 2rem;
+}
+.intro .button.button-continue .icon-next[data-v-28e1c6fc] { margin-left: 10px; margin-right: -5px; vertical-align: -5%;
+}
+.intro-bottom[data-v-28e1c6fc] { position: relative; display: flex; align-items: flex-end; justify-content: center; font-size: 1.125rem;
+}
+.intro-bottom .scrim[data-v-28e1c6fc] { position: absolute; bottom: 0;
+}
+.intro-bottom .scrim[data-v-28e1c6fc]:before { --size: -600px; --h-factor: 1; --v-factor: 0.38;
+}
+.intro-bottom .button[data-v-28e1c6fc] .icon-back, .intro-bottom .button[data-v-28e1c6fc] .icon-next { vertical-align: -5%;
+}
+@media screen and (max-height: 500px) {
+.intro[data-v-28e1c6fc] { --margin: 1rem;
+}
+.intro-top[data-v-28e1c6fc], .intro-bottom[data-v-28e1c6fc] { flex-basis: auto;
+}
+.logo[data-v-28e1c6fc] { --size: 60px;
+}
+}
+
+</style><style type="text/css" id="buttonColourCustom">.light .app .button { background:hsla(17, 45%, 35%, 0.95); color:#fff}.light .app .button:not(.disabled):hover { background:hsla(17, 45%, 35%, 0.75);}.light .settings-backgrounds .button-add-container:hover .fake-file-input { background:hsla(17, 45%, 35%, 0.75) !important; }</style></head>
+<body class="light f--default Chrome hide-overlay">
+<div class="overlay loading-overlay">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="loading-logo" data-test="loading-logo" style="display: none;" fill="#ccc">
+<path d="M256 0C114.615 0 0 114.615 0 256s114.615 256 256 256 256-114.615 256-256S397.385 0 256 0zm122.763 344.309h-15.484v-95.746c0-34.76-18.012-54.983-47.715-54.983-27.176 0-50.875 20.856-50.875 56.879v93.85h-15.484v-96.695c0-33.5-18.327-54.035-47.083-54.035s-51.507 25.28-51.507 57.827v92.9h-15.483V183.151h15.483v28.756c10.428-16.748 24.964-32.548 53.719-32.548 28.124 0 45.5 16.116 54.352 34.76 10.428-18.012 27.807-34.76 58.143-34.76 38.235 0 61.935 26.86 61.935 67.307z"></path>
+</svg>
+</div>
+<div id="main-view" style="display: block;">
+<div class="bookmarks-bar bookmarks-placeholder"></div>
+<ul id="background" class="background"><li class="background-item fadein" data-test="background" style="background-image: url(&quot;backgrounds/5740fe48-d74e-4d95-8ec7-8c1f738cabc0.jpg?momo_cache_bg_uuid=5740fe48-d74e-4d95-8ec7-8c1f738cabc0&quot;);"></li></ul>
+<div class="background-overlay show"></div>
+<div class="apps hide-apps hide-apps-visibility show-apps">
+<div class="region full show-anyway"><div data-v-28e1c6fc="" id="introduction" data-test="introduction" class="intro"><div data-v-28e1c6fc="" class="intro-top"><img data-v-28e1c6fc="" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/logo-white.svg" class="logo"></div> <div data-v-28e1c6fc="" class="intro-middle u--scrim"><div data-v-28e1c6fc="" class="intro-middle-wrapper"><span data-v-28e1c6fc="" data-test="question" class="question">
+							Hello, what's your name?
+						</span> <div data-v-28e1c6fc="" data-value="" class="input-wrapper has-text-input"><input data-v-28e1c6fc="" id="introduction-input" spellcheck="false" data-test="introduction-name" type="text" class="input"> <span data-v-28e1c6fc="" class="name hidden-span">&nbsp;</span> <!----></div> <div data-v-28e1c6fc="" class="below"><div data-v-28e1c6fc=""><div data-v-b0999a12="" data-v-28e1c6fc="" data-smooth-height-id="kdlp1r" class="resize-wrapper" style="--duration:200ms; height: 0px;"><div data-v-b0999a12="" data-resize-sensor-id="665tae" style="position: relative;"><!----><div dir="ltr" class="resize-sensor" style="pointer-events: none; position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden; max-width: 100%;"><div class="resize-sensor-expand" style="pointer-events: none; position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden; max-width: 100%;"><div style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 656px; height: 10px;"></div></div><div class="resize-sensor-shrink" style="pointer-events: none; position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden; max-width: 100%;"><div style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 200%; height: 200%;"></div></div></div></div></div> <!----></div></div></div></div> <div data-v-28e1c6fc="" class="intro-bottom"><div data-v-28e1c6fc="" class="intro-bottom-wrapper"><div data-v-28e1c6fc="" class="intro-buttons"></div></div> <div data-v-28e1c6fc="" class="scrim"></div></div></div></div>
+<div class="region top-bar"></div>
+<div class="top-row">
+<div class="region top-left"></div>
+<div class="region top-center"></div>
+<div class="region top-right"></div>
+</div>
+<div class="region center-above"></div>
+<div class="region center"></div>
+<div class="region center-below"></div>
+<div class="bottom-row">
+<div class="region bottom-left" id="bottom-left"></div>
+<div class="region bottom"></div>
+<div class="region bottom-right"></div>
+</div>
+</div>
+<div class="overlay drop-overlay">
+<p>Drop to upload backgrounds <span class="badge plus-badge">PLUS</span></p>
+</div>
+</div>
+<script src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/mquery.js"></script>
+<script src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/js/lib.min.js"></script>
+<script src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/app.min.js"></script>
+<script src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/vueAddinLoader.js"></script>
+
+
+</body></html>

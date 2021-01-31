@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>FoodGen • WorkIt</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:wght@500&family=Khand:wght@500&family=Neuton&family=Ubuntu&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: OnePage - v2.2.2
+    * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<body>
+
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+        <img src="assets/img/logo2.png" style="width: 60px; padding-right: 10px">
+        <h1 class="logo mr-auto"><a href="index.html">WorkIt</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/favicon.png" alt="" class="img-fluid"></a> -->
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allworkouts.html">All Workouts</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li class="active"><a href="foodgen.html">FoodGen</a></li>
+
+
+            </ul>
+        </nav><!-- .nav-menu -->
+
+        <div>
+            <img src="assets/img/music.png" id="icon">
+        </div>
+
+        <div id="profile">
+            <img id="user" src="assets/img/user.png" style="width: 38px">
+        </div>
+    </header><!-- End Header -->
+
+    <!-- RECIPE GENERATOR -->
+    <section id="ingredients" data-stellar-background-ratio="0.5">
+        <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                            <h2 class="make-ing">Make the Magic Happen</h2>
+                            <h4 class="make-ing">Select your ingredients</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                            <img src="assets/img/Vegetarian.jpg" style="width: 370px" style="height: 600px"> <!-- class="img-responsive" alt=""> -->
+                                    <div class="team-hover">
+                                        <div class="team-item">
+                                            <h5 class = "choose-title">Choose your veggies:</h5> 
+                                            <ul class="social-icon">
+                                                <input type = "checkbox" name = "vegetable" value = "Tomatoes" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Tomatoes </label><br>
+                                                <input type = "checkbox" name = "vegetable" value = "Onions" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Onions </label><br>
+                                                <input type = "checkbox" name = "vegetable" value = "Potatoes" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Potatoes </label><br>
+                                                <input type = "checkbox" name = "vegetable" value = "Carrots" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Carrots </label><br>
+                                                <input type = "checkbox" name = "vegetable" value = "Broccoli" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Broccoli </label><br>
+                                                <input type = "checkbox" name = "vegetable" value = "Spinach" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Spinach </label><br>
+                                                <input type = "checkbox" name = "vegetable" value = "Cauliflower" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Cauliflower </label><br>
+                                                <input type = "checkbox" name = "vegetable" value = "Zucchini" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Zucchini </label><br>
+                                                <input type = "checkbox" name = "vegetable" value = "Cabbage" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Cabbage </label><br>
+                                                <input type = "checkbox" name = "vegetable" value = "Cucumber" onclick = "validate()">
+                                                <label class = "text-color" for = "vegetable"> Cucumber </label><br>
+                                            </ul>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Vegetarian</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                            <img src="assets/img/Meat.jpg" style="width: 370px" style="height: 800px"> <!-- class="img-responsive" alt=""> -->
+                                    <div class="team-hover">
+                                        <div class="team-item">
+                                            <h5 class = "text-color">Choose your meat:</h5>
+                                            <ul id = "meat1" class="social-icon">
+                                                <input type = "checkbox" name = "meat" value = "Chicken" onclick="validate()">
+                                                <label class = "text-color" for = "meat"> Chicken </label><br>
+                                                <input type = "checkbox" name = "meat" value = "Beef" onclick="validate()">
+                                                <label class = "text-color" for = "meat"> Beef </label><br>
+                                                <input type = "checkbox" name = "meat" value = "Pork" onclick="validate()">
+                                                <label class = "text-color" for = "meat"> Pork </label><br>
+                                                <input type = "checkbox" name = "meat" value = "Fish" onclick="validate()">
+                                                <label class = "text-color" for = "meat"> Fish </label><br>
+                                                <input type = "checkbox" name = "meat" value = "Lamb" onclick="validate()">
+                                                <label class = "text-color" for = "meat"> Lamb </label><br>
+                                                <input type = "checkbox" name = "meat" value = "Bacon" onclick="validate()">
+                                                <label class = "text-color" for = "meat"> Bacon </label><br>
+                                                <input type = "checkbox" name = "meat" value = "Sausage" onclick="validate()">
+                                                <label class = "text-color" for = "meat"> Sausage </label><br>
+                                                <input type = "checkbox" name = "meat" value = "Turkey" onclick="validate()">
+                                                <label class = "text-color" for = "meat"> Turkey </label><br>
+                                            </ul>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Meat</h3>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+                            <img src="assets/img/vegan.jpg" style="width: 370px" style="height: 800px"> <!-- class="img-responsive" alt=""> -->
+                                    <div class="team-hover">
+                                        <div class="team-item">
+                                            <h5 class = "choose-title">Choose your veggies:</h5>
+                                            <ul class="social-icon">
+                                                <input type = "checkbox" name = "vegan" value = "Tomatoes" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Tomatoes </label><br>
+                                                <input type = "checkbox" name = "vegan" value = "Onions" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Onions </label><br>
+                                                <input type = "checkbox" name = "vegan" value = "Potatoes" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Potatoes </label><br>
+                                                <input type = "checkbox" name = "vegan" value = "Carrots" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Carrots </label><br>
+                                                <input type = "checkbox" name = "vegan" value = "Broccoli" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Broccoli </label><br>
+                                                <input type = "checkbox" name = "vegan" value = "Spinach" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Spinach </label><br>
+                                                <input type = "checkbox" name = "vegan" value = "Cauliflower" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Cauliflower </label><br>
+                                                <input type = "checkbox" name = "vegan" value = "Zucchini" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Zucchini </label><br>
+                                                <input type = "checkbox" name = "vegan" value = "Cabbage" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Cabbage </label><br>
+                                                <input type = "checkbox" name = "vegan" value = "Cucumber" onclick = "validate()">
+                                                <label class = "text-color" for = "vegan"> Cucumber </label><br>
+                                            </ul>
+                                        </div>
+                                    </div>
+                        </div>
+
+                        <div class="team-info">
+                            <h3> Vegan</h3>
+                        </div>
+                    </div>
+                    
+                </div>
+                <input type="button" class="magic-button" value="Generate Recipe" onclick="recipes(1)" />
+
+                <br><br><br>
+
+
+                <!-- <button id="magic" type="button" class="magic-button"  onclick="recipes(1)">Generate Recipe!</button> -->
+        </br></br></br>
+                <!-- <button type="button" class="section-button">Set Restrictions</button> -->
+
+        </div>
+
+        <div id="recipeGive" style="display: none">
+                <div class="container">
+            
+                    <div class="row" id="recipeDiv" >
+                            <div class="col-lg-6" >
+                                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                                                    
+                                        <h2 id = "recipeTitle"></h2>
+                                        <img id="recipeImage"></img>
+                                        <h5 id="link" >Link to the recipe:</h5>
+                                        <a href="#recipeUrl" target = "_blank" id="recipeUrl"></a>
+                            
+                                    </div>
+                            </div>
+                        
+                
+                            <div class="col-lg-6">
+                                    <h5 id="link" >Ingredients:</h5>
+                                    <br>
+                                <p class="ingredients-right" id="recipeIngredients"></p>
+                            </div>
+                            <br/><br/><br/><br/><br/><br/><br/>
+                            <button id="recipeButton" type="button"class="magic-button" onclick="getNewRecipe()">Get New Recipe</button>
+                        </div>
+                </div>
+            </div>
+    </section>
+
+    <script src="assets/js/app.js"></script>
+
+
+</body>
+</html>

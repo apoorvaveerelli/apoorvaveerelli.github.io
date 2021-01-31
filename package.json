@@ -1,0 +1,24 @@
+{
+  "name": "workit",
+  "version": "1.0.0",
+  "description": "App to help users maintain a healty lifestyle.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apoorvaveerelli/WorkIt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apoorvaveerelli/WorkIt/issues"
+  },
+  "homepage": "https://github.com/apoorvaveerelli/WorkIt#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "edamam-node": "^1.0.3",
+    "twilio": "^3.55.1"
+  }
+}
